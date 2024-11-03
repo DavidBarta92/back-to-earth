@@ -1,0 +1,90 @@
+{
+  "name": "newGame",
+  "backgroundPath": "",
+  "middlegroundPath": null,
+  "spritesPath": "",
+  "dialogue": "",
+  "filter" : "",
+  "music" : "../src/media/sounds/menu.wav",
+  "atmo" : "",
+  "elements": {
+    "title": {
+      "type": "text",
+      "text": "The Journey Back",
+      "x": 40,
+      "y": 70,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Akira",
+      "fontSize": 50,
+      "filter": null
+    },
+    "subTitle": {
+      "type": "text",
+      "text": "BETA",
+      "x": 460,
+      "y": 80,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Akira",
+      "fontSize": 12,
+      "filter": null
+    },
+    "question:": {
+      "type": "text",
+      "text": "txt_new_game",
+      "x": 150,
+      "y": 150,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Arial",
+      "fontSize": 20,
+      "filter": null
+    },
+    "allert": {
+      "type": "text",
+      "text": "txt_new_game_allert",
+      "x": 150,
+      "y": 170,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Arial",
+      "fontSize": 12,
+      "filter": null
+    },
+    "yes": {
+      "type": "button",
+      "text": "btn_yes",
+      "x": 150,
+      "y": 200,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Rounded",
+      "fontSize": 20,
+      "border": false,
+      "actionType": "startGame",
+      "action": "new",
+      "filter": "appointable"
+    },
+    "no": {
+      "type": "button",
+      "text": "btn_no",
+      "x": 200,
+      "y": 200,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Rounded",
+      "fontSize": 20,
+      "border": false,
+      "actionType": "setContent",
+      "action": "main",
+      "filter": "appointable"
+    }
+  }
+}

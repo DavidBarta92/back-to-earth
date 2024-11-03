@@ -1,0 +1,87 @@
+{
+  "name": "credits",
+  "backgroundPath": "",
+  "middlegroundPath": null,
+  "spritesPath": "",
+  "dialogue": "",
+  "filter" : "",
+  "music" : "../src/media/sounds/menu.wav",
+  "atmo" : "",
+  "elements": {
+    "title": {
+      "type": "text",
+      "text": "The Journey Back",
+      "x": 40,
+      "y": 70,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Akira",
+      "fontSize": 50,
+      "filter": null
+    },
+    "subTitle": {
+      "type": "text",
+      "text": "BETA",
+      "x": 460,
+      "y": 80,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Akira",
+      "fontSize": 12,
+      "filter": null
+    },
+    "credits:": {
+      "type": "text",
+      "text": "Credits:",
+      "x": 10,
+      "y": 100,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Arial",
+      "fontSize": 12,
+      "filter": null
+    },
+    "author": {
+      "type": "text",
+      "text": "txt_code_art",
+      "x": 10,
+      "y": 130,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Arial",
+      "fontSize": 12,
+      "filter": null
+    },
+    "version": {
+      "type": "text",
+      "text": "v0.1.0",
+      "x": 10,
+      "y": 160,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Arial",
+      "fontSize": 12,
+      "filter": null
+    },
+    "back": {
+      "type": "button",
+      "text": "btn_back",
+      "x": 40,
+      "y": 300,
+      "width": 70,
+      "height": 20,
+      "color": "white",
+      "font": "Rounded",
+      "fontSize": 20,
+      "border": false,
+      "actionType": "setContent",
+      "action": "main",
+      "filter": "appointable"
+    }
+  }
+}
