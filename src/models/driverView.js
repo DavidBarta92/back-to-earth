@@ -5,7 +5,6 @@ import { player } from "./player.js";
 import inputController from "../controllers/inputController.js";
 import {tree, rock, cross, background } from "./sprites.js";
 import Filter from "../views/filter";
-import desert from "../views/driver/desert.json";
 import Anim from "../views/anim";
 import dataController from "../controllers/dataController";
 import Timer from "./timer";
@@ -59,27 +58,18 @@ export const Driver = (function(){
     var lastDelta = 0;
     var currentTimeString = "";
 
-    var roadParam = {
-        maxHeight: 900,
-        maxCurve:  700,
-        length:    8,
-        curvy:     0.9,
-        mountainy: 0.8,
-        zoneSize:  80
-    }
-
     var road = [];
     var roadSegmentSize = 5;
     var numberOfSegmentPerColor = 4;
     var keys = [];
     var render;
-    let cursor = inputController.getCursor();
     var driverViewIndexParams;
 
     var gameInterval;
     var absoluteIndex = 0;
     var baseOffset = 0;
     var currentDialogueText;
+    var roadParam;
 
     // -----------------------------
     // -- closure scoped function --
@@ -104,14 +94,17 @@ export const Driver = (function(){
             camera_distance: 30,
             camera_height: 150
         };
+        
         interactives = {};
-        contentContainer = desert;
+        contentContainer = dataController.loadContent(state);
         spritesheet.src = contentContainer.spritesPath;
         backgroundImage.src = contentContainer.backgroundPath;
         hud.src = "../src/media/images/drive.png";
         languageFile = dataController.loadLanguageFile(state);
         dialogueFile = dataController.loadDialogue(contentContainer.dialogue);
         newSpeechIndex = '1';
+
+        roadParam = contentContainer.roadParam;
     };
 
     //renders one frame
@@ -230,7 +223,7 @@ export const Driver = (function(){
                     render.height / 2 + endProjectedHeight, 
                     endScaling, 
                     nextSegment.curve - baseOffset - lastDelta * endScaling, 
-                    counter < numberOfSegmentPerColor, currentSegmentIndex == 2 || currentSegmentIndex == (roadParam.length-render.depthOfField));
+                    counter < numberOfSegmentPerColor, currentSegmentIndex === 2 || currentSegmentIndex === (roadParam.length-render.depthOfField));
             }
             if(currentSegment.sprite){
                 spriteBuffer.push({
@@ -296,7 +289,7 @@ export const Driver = (function(){
                     render.height / 2 + holoEndProjectedHeight, 
                     holoEndScaling, 
                     holoNextSegment.curve - baseOffset - lastDelta * holoEndScaling, 
-                    holoCurrentSegmentIndex == 2 || holoCurrentSegmentIndex == (roadParam.length-render.depthOfField));
+                    holoCurrentSegmentIndex === 2 || holoCurrentSegmentIndex === (roadParam.length-render.depthOfField));
                 }
                 if(holoCurrentSegment.sprite){
                     holoSpriteBuffer.push({
@@ -352,7 +345,7 @@ export const Driver = (function(){
 
         //draw dialoge things
         currentDialogueImage.src = currentDialogueText.image;
-        context.drawImage(currentDialogueImage, 0, 0, canvas.width, canvas.height);
+        context.drawImage(currentDialogueImage, 959, 42, 310, 177);
         writeText(currentDialogueText.text, (currentDialogueText.text.x + currentDialogueText.text.textBoxEnd));
 
         drawString(percent,{x: 287, y: 488});
@@ -504,12 +497,12 @@ export const Driver = (function(){
         context.font        = fontString;
         context.fillStyle   = element.color;
         Object.entries(languageFile).forEach(label => {
-            if (label[0] == element.text){
+            if (label[0] === element.text){
                 textString = label[1]; 
                 return;
             }
         });
-        if (!(textString == null)) {
+        if (!!textString) {
             var lineheight = element.fontSize +(element.fontSize /4);
             var currentLineX = element.x;
             var currentLineY = element.y;
@@ -663,7 +656,7 @@ export const Driver = (function(){
 
             for(var i=0; i < roadParam.zoneSize; i++){
                 // add a tree
-                if(i % roadParam.zoneSize / 4 == 0){
+                if(i % roadParam.zoneSize / 4 === 0){
                     var sprite = {type: rock, pos: -0.55};
                 } else {
                     if(r() < 0.05) {
