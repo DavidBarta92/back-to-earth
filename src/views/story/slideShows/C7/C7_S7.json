@@ -1,0 +1,33 @@
+{
+    "name" : "C7_S7",
+    "backgroundPath" : "../src/media/images/C7_S7_bg.b64",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "atmo" : "",
+    "elements" : {
+        "text": {
+            "type": "text",
+            "text": "dia_C7_S7",
+            "x": 44,
+            "y": 192,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 200,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 10000,
+        "actionType": "setContent",
+        "action": "C7_S8",
+        "allowed" : true
+    }
+    }

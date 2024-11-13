@@ -1,0 +1,48 @@
+{
+    "name" : "C5_S2",
+    "backgroundPath" : "../src/media/images/C5_S2_bg.b64",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "atmo" : "",
+    "elements" : {
+        "dial1": {
+            "type": "text",
+            "text": "dia_C5_S2_1",
+            "x": 855,
+            "y": 110,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 250,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          },
+          "dial2": {
+            "type": "text",
+            "text": "dia_C5_S2_2",
+            "x": 855,
+            "y": 510,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 250,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 10000,
+        "actionType": "setContent",
+        "action": "C5_S3",
+        "allowed" : true
+    }
+    }
