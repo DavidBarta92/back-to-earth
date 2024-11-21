@@ -44,10 +44,11 @@ src/
 ## Installation and Setup
 
 1. **Build the Application**
-   ```bash
+```bash
    npm run build
 ```
+
 2. **Start the Application**
-   ```bash
+```bash
    npm start
 ```
