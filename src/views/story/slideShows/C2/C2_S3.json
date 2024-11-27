@@ -1,0 +1,78 @@
+{
+    "name" : "C2_S3",
+    "backgroundPath" : "../src/media/images/C2_S3.png",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "atmo" : "../src/media/sounds/mars_base_atmo.mp3",
+    "elements" : {
+        "aiza": {
+            "type": "text",
+            "text": "dia_C2_S3_1",
+            "x": 75,
+            "y": 220,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd": 350,
+            "filter": null
+          },
+        "teo": {
+            "type": "text",
+            "text": "dia_C2_S3_2",
+            "x": 75,
+            "y": 300,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd": 350,
+            "filter": null
+          },
+          "aiza2": {
+            "type": "text",
+            "text": "dia_C2_S3_3",
+            "x": 75,
+            "y": 400,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd" : 350,
+            "filter": null
+          },
+          "aiza3": {
+            "type": "text",
+            "text": "dia_C2_S3_4",
+            "x": 75,
+            "y": 500,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd" : 350,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 15000,
+        "actionType": "setContent",
+        "action": "C2_S4",
+        "allowed" : true
+    }
+    }

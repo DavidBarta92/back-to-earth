@@ -1,12 +1,42 @@
 {
   "name": "C1_batteryConnectionWrongnum",
-  "backgroundPath": "../src/media/images/battery.b64",
+  "backgroundPath": "../src/media/images/battery.png",
   "spritesPath": null,
   "dialogue": null,
   "filter" : "",
-  "music" : "",
+  "music" : "../src/media/sounds/inclusion.mp3",
   "atmo" : "../src/media/sounds/astronaut_suit.mp3",
   "elements": {
+    "chapter": {
+      "type": "text",
+      "text": "C1_title",
+      "x": 1175,
+      "y": 650,
+      "vertical" : true,
+      "width": 70,
+      "height": 20,
+      "rotate": 2,
+      "color": "black",
+      "font": "Akira",
+      "fontSize": 70,
+      "border": false,
+      "filter" : ""
+    },
+  "goal": {
+      "type": "text",
+      "text": "C1_goal",
+      "x": 1215,
+      "y": 650,
+      "vertical" : true,
+      "width": 70,
+      "height": 20,
+      "rotate": 2,
+      "color": "black",
+      "font": "Rounded",
+      "fontSize": 25,
+      "border": false,
+      "filter" : ""
+    },
     "nums_field":{
       "type":"text",
       "text":"_ _ _ _",
@@ -16,14 +46,14 @@
       "height":20,
       "rotate":0,
       "color":"black",
-      "font":"Akira",
-      "fontSize":12,
+      "font":"G7_Segment_7a",
+      "fontSize":18,
       "border":false,
-      "filter":null
+      "filter" : ""
    },
    "1":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 531,
      "y": 165,
      "width": 50,
@@ -33,11 +63,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "2":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 601,
      "y": 165,
      "width": 50,
@@ -47,11 +77,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnection2num",
-     "filter":"appointable"
+     "filter" : ""
    },
    "3":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 671,
      "y": 165,
      "width": 50,
@@ -61,11 +91,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "4":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 531,
      "y": 235,
      "width": 50,
@@ -75,11 +105,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "5":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 601,
      "y": 235,
      "width": 50,
@@ -89,11 +119,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "6":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 671,
      "y": 235,
      "width": 50,
@@ -103,11 +133,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "7":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 531,
      "y": 305,
      "width": 50,
@@ -117,11 +147,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "8":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 601,
      "y": 305,
      "width": 50,
@@ -131,11 +161,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
    },
    "9":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 671,
      "y": 305,
      "width": 50,
@@ -145,11 +175,11 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
   },
   "0":{
      "type": "activeArea",
-     "text": null,
+     "text": "",
      "x": 601,
      "y": 375,
      "width": 50,
@@ -159,7 +189,7 @@
      "fontSize": 50,
      "actionType":"setContent",
      "action":"C1_batteryConnectionWrongnum",
-     "filter":"appointable"
+     "filter" : ""
   },
   "back": {
      "type": "button",
@@ -175,7 +205,7 @@
      "border": false,
      "actionType": "setContent",
      "action": "C1_battery",
-     "filter": "appointable"
+     "filter" : ""
    }
   }
 }  

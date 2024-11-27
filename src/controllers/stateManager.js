@@ -8,11 +8,13 @@ var stateManager = (function () {
     view: 'menu', // 'menu', 'driver', 'story'
     status: {
       content: 'startScreen',
-      view: 'menu'
+      view: 'menu',
+      atmoPath: '../src/media/sounds/astronaut_suit.mp3'
     },
     chapter: 0,
     scene: 0,
     language: 'eng', // 'hun', 'eng'
+    transitionSound: null,
     items: {
       one: 'one',
       two: null,
@@ -171,6 +173,11 @@ var stateManager = (function () {
         ])
       }
     },
+    setAtmoPath: (atmoPath) => {
+      state = loadState()
+      state.status.atmoPath = atmoPath
+      dataController.saveState(state)
+    },
     addItem: (item, place) => {
       state = loadState()
       switch (place) {
@@ -223,6 +230,11 @@ var stateManager = (function () {
       state.init = false
       dataController.saveState(state)
       D.log(['The state is not init anymore.'])
+    },
+    setTransitionSound: (soundPath) => {
+      state = loadState()
+      state.transitionSound = soundPath
+      dataController.saveState(state)
     }
   }
 })()

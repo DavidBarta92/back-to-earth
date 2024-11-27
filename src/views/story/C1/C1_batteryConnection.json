@@ -1,12 +1,42 @@
 {
     "name":"C1_batteryConnection",
-    "backgroundPath":"../src/media/images/battery.b64",
+    "backgroundPath":"../src/media/images/battery.png",
     "spritesPath":null,
     "dialogue":null,
     "filter":"",
-    "music":"",
+    "music" : "../src/media/sounds/inclusion.mp3",
     "atmo" : "../src/media/sounds/astronaut_suit.mp3",
     "elements":{
+      "chapter": {
+        "type": "text",
+        "text": "C1_title",
+        "x": 1175,
+        "y": 650,
+        "vertical" : true,
+        "width": 70,
+        "height": 20,
+        "rotate": 2,
+        "color": "black",
+        "font": "Akira",
+        "fontSize": 70,
+        "border": false,
+        "filter": null
+      },
+    "goal": {
+        "type": "text",
+        "text": "C1_goal",
+        "x": 1215,
+        "y": 650,
+        "vertical" : true,
+        "width": 70,
+        "height": 20,
+        "rotate": 2,
+        "color": "black",
+        "font": "Rounded",
+        "fontSize": 25,
+        "border": false,
+        "filter": null
+      },
        "nums_field":{
           "type":"text",
           "text":"_ _ _ _",
@@ -16,14 +46,14 @@
           "height":20,
           "rotate":0,
           "color":"black",
-          "font":"Akira",
-          "fontSize":12,
+          "font":"G7_Segment_7a",
+          "fontSize":18,
           "border":false,
           "filter":null
        },
        "1":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 531,
          "y": 165,
          "width": 50,
@@ -32,12 +62,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "2":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 601,
          "y": 165,
          "width": 50,
@@ -46,12 +75,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnection2num",
-         "filter":"appointable"
+         "action":"C1_batteryConnection2num"
        },
        "3":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 671,
          "y": 165,
          "width": 50,
@@ -60,12 +88,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "4":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 531,
          "y": 235,
          "width": 50,
@@ -74,12 +101,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "5":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 601,
          "y": 235,
          "width": 50,
@@ -88,12 +114,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "6":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 671,
          "y": 235,
          "width": 50,
@@ -102,12 +127,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "7":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 531,
          "y": 305,
          "width": 50,
@@ -116,12 +140,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "8":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 601,
          "y": 305,
          "width": 50,
@@ -130,12 +153,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
        },
        "9":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 671,
          "y": 305,
          "width": 50,
@@ -144,12 +166,11 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
       },
       "0":{
          "type": "activeArea",
-         "text": null,
+         "text": "",
          "x": 601,
          "y": 375,
          "width": 50,
@@ -158,8 +179,7 @@
          "font": "Arial",
          "fontSize": 50,
          "actionType":"setContent",
-         "action":"C1_batteryConnectionWrongnum",
-         "filter":"appointable"
+         "action":"C1_batteryConnectionWrongnum"
       },
       "back": {
          "type": "button",
@@ -174,8 +194,7 @@
          "fontSize": 24,
          "border": false,
          "actionType": "setContent",
-         "action": "C1_battery",
-         "filter": "appointable"
+         "action": "C1_battery"
        }
     }
  }

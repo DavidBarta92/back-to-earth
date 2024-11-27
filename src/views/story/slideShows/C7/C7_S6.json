@@ -5,12 +5,13 @@
     "itemsPath" : "",
     "dialogue" : "",
     "filter" : "fadeOn",
-    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "music" : "",
     "atmo" : "",
+    "escAllowed" : false,
     "elements" : {
         "text": {
             "type": "text",
-            "text": "dia_C7_S6",
+            "text": "",
             "x": 395,
             "y": 637,
             "width": 70,

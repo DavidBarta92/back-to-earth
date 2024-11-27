@@ -1,0 +1,93 @@
+{
+    "name" : "C4_S9",
+    "backgroundPath" : "",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "",
+    "atmo" : "../src/media/sounds/mars_base_atmo2.mp3",
+    "elements" : {
+        "text1": {
+            "type": "text",
+            "text": "dia_C4_S9_1",
+            "x": 600,
+            "y": 200,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 600,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          },
+          "text2": {
+            "type": "text",
+            "text": "dia_C4_S9_2",
+            "x": 600,
+            "y": 250,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 600,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          },
+          "text3": {
+            "type": "text",
+            "text": "dia_C4_S9_3",
+            "x": 600,
+            "y": 350,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 600,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          },
+          "text4": {
+            "type": "text",
+            "text": "dia_C4_S9_4",
+            "x": 600,
+            "y": 450,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 600,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          },
+          "text5": {
+            "type": "text",
+            "text": "dia_C4_S9_5",
+            "x": 600,
+            "y": 500,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "textBoxEnd": 600,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 26000,
+        "actionType": "setContent",
+        "action": "C4_S10",
+        "allowed" : true
+    }
+    }

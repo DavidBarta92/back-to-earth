@@ -1,36 +1,22 @@
 {
   "name": "main",
   "backgroundPath": null,
-  "middlegroundPath": "../src/media/images/black.b64",
+  "middlegroundPath": "../src/media/images/menu.png",
   "spritesPath": null,
   "dialogue": null,
   "filter" : "",
   "music" : "../src/media/sounds/menu.wav",
   "atmo" : "",
   "elements": {
-    "title": {
-      "type": "text",
-      "text": "The Journey Back",
-      "x": 40,
-      "y": 70,
-      "width": 70,
-      "height": 20,
-      "rotate": 2,
-      "color": "white",
-      "font": "Akira",
-      "fontSize": 50,
-      "border": false,
-      "filter": null
-    },
     "subTitle": {
       "type": "text",
       "text": "txt_beta",
-      "x": 40,
-      "y": 80,
+      "x": 645,
+      "y": 100,
       "width": 70,
       "height": 20,
       "rotate": 0,
-      "color": "white",
+      "color": "black",
       "font": "Akira",
       "fontSize": 12,
       "border": false,
@@ -39,6 +25,7 @@
     "continue": {
       "type": "button",
       "text": "btn_continue",
+      "fx": "../src/media/sounds/click.ogg",
       "x": 40,
       "y": 150,
       "width": 70,
@@ -56,6 +43,7 @@
     "newGame": {
       "type": "button",
       "text": "btn_newGame",
+      "fx": "../src/media/sounds/click.ogg",
       "x": 40,
       "y": 180,
       "width": 70,
@@ -72,6 +60,7 @@
     "options": {
       "type": "button",
       "text": "btn_options",
+      "fx": "../src/media/sounds/click.ogg",
       "x": 40,
       "y": 210,
       "width": 70,
@@ -88,6 +77,7 @@
     "credits": {
       "type": "button",
       "text": "btn_credits",
+      "fx": "../src/media/sounds/click.ogg",
       "x": 40,
       "y": 240,
       "width": 70,
@@ -104,6 +94,7 @@
     "main_exit": {
       "type": "button",
       "text": "btn_exit",
+      "fx": "../src/media/sounds/click.ogg",
       "x": 40,
       "y": 270,
       "color": "white",
