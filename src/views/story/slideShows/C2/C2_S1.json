@@ -1,18 +1,18 @@
 {
     "name" : "C2_S1",
-    "backgroundPath" : "",
+    "backgroundPath" : "../src/media/images/C2_S1.png",
     "spritesPath" : "",
     "itemsPath" : "",
     "dialogue" : "",
     "filter" : "fadeOn",
     "music" : "../src/media/sounds/i_am_you_am.mp3",
-    "atmo" : "",
+    "atmo" : "../src/media/sounds/mars_base_atmo.mp3",
     "elements" : {
-        "text": {
+        "aiza": {
             "type": "text",
             "text": "dia_C2_S1",
-            "x": 435,
-            "y": 612,
+            "x": 365,
+            "y": 70,
             "width": 70,
             "height": 20,
             "rotate": 0,
@@ -20,13 +20,14 @@
             "font": "Inconsolata",
             "fontSize": 20,
             "border": false,
+            "textBoxEnd": 500,
             "filter": null
           }
     },
     "timer" : {
-        "time": 10000,
+        "time": 7000,
         "actionType": "setContent",
-        "action": "C2_hall2",
+        "action": "C2_S2",
         "allowed" : true
     }
     }

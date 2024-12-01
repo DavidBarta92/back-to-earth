@@ -5,7 +5,7 @@
     "itemsPath" : "",
     "dialogue" : "",
     "filter" : "fadeOn",
-    "music" : "",
+    "music" : "../src/media/sounds/inclusion.mp3",
     "atmo" : "",
     "elements" : {
         "Thomas": {
@@ -32,7 +32,7 @@
             "height": 20,
             "rotate": 0,
             "textBoxEnd": 250,
-            "color": "DarkSalmon",
+            "color": "white",
             "font": "Inconsolata",
             "fontSize": 20,
             "border": false,
@@ -40,7 +40,7 @@
         }
     },
     "timer" : {
-        "time": 10000,
+        "time": 9000,
         "actionType": "setContent",
         "action": "C1_S11",
         "allowed" : true

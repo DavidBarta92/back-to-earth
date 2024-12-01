@@ -5,7 +5,7 @@
     "itemsPath" : "",
     "dialogue" : "",
     "filter" : "fadeOn",
-    "music" : "",
+    "music" : "../src/media/sounds/inclusion.mp3",
     "atmo" : "",
     "elements" : {
         "Aiza": {
@@ -16,7 +16,7 @@
             "width": 70,
             "height": 20,
             "rotate": 0,
-            "color": "DarkSalmon",
+            "color": "white",
             "font": "Inconsolata",
             "textBoxEnd": 300,
             "fontSize": 20,
@@ -40,7 +40,7 @@
         }
     },
     "timer" : {
-        "time": 11000,
+        "time": 9000,
         "actionType": "setContent",
         "action": "C1_S15",
         "allowed" : true

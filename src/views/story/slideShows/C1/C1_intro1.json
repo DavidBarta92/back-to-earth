@@ -1,0 +1,18 @@
+{
+    "name" : "C1_intro1",
+    "backgroundPath" : "../src/media/images/C11_S29_bg.png",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "C1_S1",
+    "filter" : "fadeOn",
+    "music" : "../src/media/sounds/inclusion.mp3",
+    "atmo" : "",
+    "elements" : {
+    },
+    "timer" : {
+        "time": 10000,
+        "actionType": "setContent",
+        "action": "C1_intro2",
+        "allowed" : true
+    }
+}

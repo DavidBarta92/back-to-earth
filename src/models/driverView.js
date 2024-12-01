@@ -3,12 +3,13 @@ import RenderManager from "../controllers/renderManager";
 import stateManager from "../controllers/stateManager";
 import { player } from "./player.js";
 import inputController from "../controllers/inputController.js";
-import {tree, rock, cross, background } from "./sprites.js";
+import {rock_1, rock_2, rock_3, rock_4, rock_5, rock_6, rock_7, cross, background } from "./sprites.js";
 import Filter from "../views/filter";
 import Anim from "../views/anim";
 import dataController from "../controllers/dataController";
 import Timer from "./timer";
 import Draw from "./draw";
+import Sound from "./sound.js";
 
 var dialogueOptionClicked;
 var backgroundImage = new Image();
@@ -21,6 +22,7 @@ var languageFile;
 var dialogueFile;
 var spokenSpeeches = [];
 var interactives;
+var noiseVolume = 0;
 
 var requestNewFrame = false;
 
@@ -105,6 +107,7 @@ export const Driver = (function(){
         newSpeechIndex = '1';
 
         roadParam = contentContainer.roadParam;
+        if(contentContainer.hasOwnProperty('cursor') && !contentContainer.cursor) document.body.style.cursor = 'none';
     };
 
     //renders one frame
@@ -117,7 +120,7 @@ export const Driver = (function(){
         const delta = player.updateCarState(baseOffset);
         handleSpeedAndPosition(keys, delta);
 
-        Draw.drawBackground(+(2*(player.posx)),backgroundImage);
+        Draw.drawBackground(+((player.posx)*0.6),backgroundImage);
         
         renderRoad();
  
@@ -128,6 +131,11 @@ export const Driver = (function(){
     }
 
     ///////////////////////////////////////////////////////////////////////
+
+    function roundNumber(num, decimals) {
+        let factor = Math.pow(10, decimals);
+        return Math.round(num * factor) / factor;
+    }
       
     const handleSpeedAndPosition = function(keys, delta) {
         if (keys[38]) {
@@ -139,13 +147,23 @@ export const Driver = (function(){
         } else {
           player.speed -= player.deceleration;
         }
-      
+        soundPlaying();
         player.speed = Math.max(0, player.speed); // Cannot go in reverse
         player.speed = Math.min(player.speed, player.maxSpeed); // Maximum speed
         player.position += player.speed;
       
         handleCarTurning(keys, delta);
       }
+
+    const soundPlaying = function() {
+        noiseVolume = roundNumber(player.speed, 0) > 0.001 ? roundNumber(player.speed, 3) * 2 / 10 : 0;
+        Sound.noise('../src/media/sounds/rover_noise.mp3', roundNumber(noiseVolume, 3));
+
+        if (Math.abs(player.delta) > 130 && player.speed > 3) {
+            Sound.fx('../src/media/sounds/alarm.mp3');
+            player.speed -= 0.2;
+          }
+    }
       
     const handleDialogueOptionClick = function(keys) {
         if (keys[49]) {
@@ -308,9 +326,9 @@ export const Driver = (function(){
         
         var holoSprite;
 
-        while(holoSprite = holoSpriteBuffer.pop()) {
-            Draw.sprite(holoSprite);
-        }
+        // while(holoSprite = holoSpriteBuffer.pop()) {
+        //     Draw.sprite(holoSprite);
+        // }
     }    
 
     const setActionByAbsoluteIndex = function(){
@@ -341,6 +359,7 @@ export const Driver = (function(){
 
     const setState = function(){
         if (contentContainer.end.actionType === "setToClickView") {
+            Sound.noiseStop();
             stateManager.setView('story');
             stateManager.setContent(contentContainer.end.action);
             gameCanvas.clear();
@@ -355,10 +374,10 @@ export const Driver = (function(){
     const drawElements = function(elements) {
         document.fonts.ready.then(function () {
             Object.entries(elements).forEach(element => {
-                if (element[1].type === 'rock') {
+                if (element[1].type === 'rock_2') {
                     
                 }
-                if (element[1].type === 'tree') {
+                if (element[1].type === 'rock_1') {
                     
                 }
                 if (element[1].type === 'button' || element[1].type === 'text'){
@@ -495,12 +514,41 @@ export const Driver = (function(){
             }
 
             for(var i=0; i < roadParam.zoneSize; i++){
-                // add a tree
                 if(i % roadParam.zoneSize / 4 === 0){
-                    var sprite = {type: rock, pos: -0.55};
+                    var sprite = {type: rock_4, pos: -0.55};
                 } else {
-                    if(r() < 0.05) {
-                        var spriteType = tree;//([tree,rock])[Math.floor(r()*1.9)];
+                    if(r() < 0.1) {
+                        var spriteType = rock_1;
+                        var sprite = {type: spriteType, pos: 0.6 + 4*r()};
+                        if(r() < 0.5){
+                            sprite.pos = -sprite.pos;
+                        }
+                    } else if(r() < 0.14) {
+                        var spriteType = rock_3;
+                        var sprite = {type: spriteType, pos: 0.6 + 4*r()};
+                        if(r() < 0.5){
+                            sprite.pos = -sprite.pos;
+                        }
+                    } else if(r() < 0.5) {
+                        var spriteType = rock_2;
+                        var sprite = {type: spriteType, pos: 0.6 + 4*r()};
+                        if(r() < 0.5){
+                            sprite.pos = -sprite.pos;
+                        }
+                    } else if(r() > 0.85) {
+                        var spriteType = rock_5;
+                        var sprite = {type: spriteType, pos: 0.6 + 4*r()};
+                        if(r() < 0.5){
+                            sprite.pos = -sprite.pos;
+                        }
+                    } else if(r() > 0.7) {
+                        var spriteType = rock_6;
+                        var sprite = {type: spriteType, pos: 0.6 + 4*r()};
+                        if(r() < 0.5){
+                            sprite.pos = -sprite.pos;
+                        }
+                    } else if(r() > 0.5) {
+                        var spriteType = rock_7;
                         var sprite = {type: spriteType, pos: 0.6 + 4*r()};
                         if(r() < 0.5){
                             sprite.pos = -sprite.pos;
@@ -537,6 +585,8 @@ export const Driver = (function(){
         start: function(state){
             var state = state;
             init(state);
+            //Sound.atmo(contentContainer.atmo);
+            //Sound.music(contentContainer.music);
             if (!pause){
                 gameInterval = setInterval(renderGameFrame, 1);
                 generateRoad();
@@ -555,36 +605,3 @@ export const Driver = (function(){
 }
 ());
 
-export const Driver2 = (function(){
-    const init = function(state){
-
-    }
-
-    //render one frame of the menu
-    const renderMenuFrame = function(){
-
-    }
-
-    //tracking cursor
-    const trackInput = function(){
-
-    }
-
-    const trackAnimation = function(){
-
-    }
-
-    return {
-        render: function(state){
-
-            },
-
-        //its only for th first screen rendering at the game starting (this preload pictures, fonts for the clickview)
-        preRender: function(state){
-
-            }
-        }
-    }
-());
-
-//export default Driver;

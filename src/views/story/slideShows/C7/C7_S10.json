@@ -5,8 +5,9 @@
     "itemsPath" : "",
     "dialogue" : "",
     "filter" : "fadeOn",
-    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "music" : "",
     "atmo" : "",
+    "escAllowed" : false,
     "elements" : {
         "empty_object": {
             "type": "empty_object",

@@ -1,0 +1,48 @@
+{
+    "name" : "C2_S5",
+    "backgroundPath" : "../src/media/images/C2_S5.png",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "../src/media/sounds/i_am_you_am.mp3",
+    "atmo" : "../src/media/sounds/mars_base_atmo.mp3",
+    "elements" : {
+        "teo": {
+            "type": "text",
+            "text": "dia_C2_S5_1",
+            "x": 30,
+            "y": 300,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "#dc3a15",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd": 250,
+            "filter": null
+          },
+          "aiza": {
+            "type": "text",
+            "text": "dia_C2_S5_2",
+            "x": 1000,
+            "y": 300,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "#dc3a15",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "border": false,
+            "textBoxEnd": 250,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 17000,
+        "actionType": "setContent",
+        "action": "C2_hall2",
+        "allowed" : true
+    }
+    }

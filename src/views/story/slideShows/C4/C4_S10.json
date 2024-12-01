@@ -1,0 +1,48 @@
+{
+    "name" : "C4_S10",
+    "backgroundPath" : "",
+    "spritesPath" : "",
+    "itemsPath" : "",
+    "dialogue" : "",
+    "filter" : "fadeOn",
+    "music" : "",
+    "atmo" : "../src/media/sounds/mars_base_atmo2.mp3",
+    "elements" : {
+        "text1": {
+            "type": "text",
+            "text": "dia_C4_S10_1",
+            "x": 435,
+            "y": 100,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "textBoxEnd":400,
+            "border": false,
+            "filter": null
+          },
+          "text2": {
+            "type": "text",
+            "text": "dia_C4_S10_2",
+            "x": 435,
+            "y": 600,
+            "width": 70,
+            "height": 20,
+            "rotate": 0,
+            "color": "white",
+            "font": "Inconsolata",
+            "fontSize": 20,
+            "textBoxEnd":400,
+            "border": false,
+            "filter": null
+          }
+    },
+    "timer" : {
+        "time": 10000,
+        "actionType": "setContent",
+        "action": "C4_S11",
+        "allowed" : true
+    }
+    }
